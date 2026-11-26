@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Package xmlns="http://schemas.microsoft.com/appx/manifest/foundation/windows10"
+         xmlns:uap="http://schemas.microsoft.com/appx/manifest/uap/windows10"
+         xmlns:uap3="http://schemas.microsoft.com/appx/manifest/uap/windows10/3"
+         xmlns:rescap="http://schemas.microsoft.com/appx/manifest/foundation/windows10/restrictedcapabilities"
+         IgnorableNamespaces="uap uap3 rescap">
+  <Identity Name="StillLyrics.WeChatEdition" Publisher="CN=StillLyrics, OID.2.25.311729368913984317654407730594956997722=1" Version="1.0.6.0" ProcessorArchitecture="x64"/>
+  <Properties>
+    <DisplayName>定格词岛 · 微信通知版</DisplayName>
+    <PublisherDisplayName>StillLyrics</PublisherDisplayName>
+    <Logo>Assets\StoreLogo.png</Logo>
+  </Properties>
+  <Dependencies>
+    <TargetDeviceFamily Name="Windows.Desktop" MinVersion="10.0.22621.0" MaxVersionTested="10.0.26300.0"/>
+  </Dependencies>
+  <Resources><Resource Language="zh-CN"/></Resources>
+  <Applications>
+    <Application Id="Island" Executable="StillLyrics.exe" EntryPoint="Windows.FullTrustApplication">
+      <uap:VisualElements DisplayName="定格词岛 · 微信通知版" Description="桌面歌词与微信提醒"
+                          BackgroundColor="transparent" Square150x150Logo="Assets\Square150.png" Square44x44Logo="Assets\Square44.png"/>
+    </Application>
+  </Applications>
+  <Capabilities>
+    <uap3:Capability Name="userNotificationListener"/>
+    <rescap:Capability Name="runFullTrust"/>
+  </Capabilities>
+</Package>
